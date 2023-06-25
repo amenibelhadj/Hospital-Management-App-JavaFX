@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="959.0" prefWidth="861.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_user.gui.GestionUserController">
+   <children>
+      <Label layoutX="213.0" layoutY="39.0" prefHeight="64.0" prefWidth="443.0" text="Gestion des utilisateurs" textAlignment="CENTER" textFill="#0085a1">
+         <font>
+            <Font name="Impact" size="44.0" />
+         </font>
+      </Label>
+      <Text fill="#303239" layoutX="104.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez  Nom:">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font></Text>
+      <Text fill="#303239" layoutX="104.0" layoutY="642.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez  Prénom:">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font></Text>
+      <Text fill="#303239" layoutX="104.0" layoutY="695.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez  CIN:">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font></Text>
+      <Text fill="#303239" layoutX="104.0" layoutY="744.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez  E-mail:">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font></Text>
+      <Text fill="#303239" layoutX="104.0" layoutY="798.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sélectionnez  rôle:">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font></Text>
+      <TextField fx:id="gnom" layoutX="292.0" layoutY="562.0" prefHeight="31.0" prefWidth="200.0" promptText="Entrer Nom" />
+      <TextField fx:id="gprenom" layoutX="292.0" layoutY="614.0" prefHeight="31.0" prefWidth="200.0" promptText="Entrer Prénom" />
+      <TextField fx:id="gcin" layoutX="292.0" layoutY="666.0" prefHeight="31.0" prefWidth="200.0" promptText="8 chiffres" />
+      <TextField fx:id="gemail" alignment="CENTER" layoutX="292.0" layoutY="715.0" prefHeight="31.0" prefWidth="200.0" promptText="-----------------@--------" />
+      <ComboBox fx:id="boxrole2" layoutX="292.0" layoutY="769.0" prefHeight="31.0" prefWidth="200.0" promptText="Choisissez rôle" />
+      <Text fill="#303239" layoutX="104.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez ID:">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font></Text>
+      <TextField fx:id="gid" layoutX="292.0" layoutY="517.0" prefHeight="31.0" prefWidth="200.0" promptText="Entrer ID" />
+      <TableView fx:id="table" layoutX="121.0" layoutY="210.0" onMouseClicked="#getSelected" prefHeight="270.0" prefWidth="614.0">
+        <columns>
+          <TableColumn fx:id="IdColumn" prefWidth="54.0" text="ID" visible="false" />
+          <TableColumn fx:id="NomColumn" prefWidth="88.0" text="Nom" />
+            <TableColumn fx:id="PrenomColumn" prefWidth="103.0" text="Prénom" />
+            <TableColumn fx:id="CinColumn" prefWidth="125.0" text="CIN" />
+            <TableColumn fx:id="EmailColumn" prefWidth="188.0" text="e-mail" />
+            <TableColumn fx:id="RoleColumn" minWidth="0.0" prefWidth="112.0" text="Rôle" />
+            <TableColumn fx:id="MdpColumn" prefWidth="106.0" text="Mot de passe" visible="false" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnModifier" layoutX="595.0" layoutY="643.0" mnemonicParsing="false" onAction="#ModifierU" prefHeight="71.0" prefWidth="190.0" style="-fx-background-color: #0085a1;" text="Modifier" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSupprimer" layoutX="595.0" layoutY="758.0" mnemonicParsing="false" onAction="#SupprimerU" prefHeight="71.0" prefWidth="190.0" style="-fx-background-color: #0085a1;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnAjouter" layoutX="595.0" layoutY="525.0" mnemonicParsing="false" onAction="#AjouterU" prefHeight="71.0" prefWidth="190.0" style="-fx-background-color: #0085a1;" text="Ajouter" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+      <Text fill="#303239" layoutX="96.0" layoutY="847.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez mot de passe:">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="gmdp" layoutX="292.0" layoutY="825.0" prefHeight="31.0" prefWidth="200.0" />
+      <ImageView fitHeight="116.0" fitWidth="127.0" layoutX="696.0" layoutY="13.0">
+         <image>
+            <Image url="@../image/Eye%20Center%20Logo%20Template%20Design%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="back" fitHeight="64.0" fitWidth="67.0" layoutX="37.0" layoutY="39.0" onMouseClicked="#back_tologin">
+         <image>
+            <Image url="@../image/la-gauche.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="77.0" layoutY="113.0" mnemonicParsing="false" onAction="#GoToRendezVous" prefHeight="42.0" prefWidth="226.0" style="-fx-background-color: #0085a1;" text="Les rendez vous" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="558.0" layoutY="113.0" mnemonicParsing="false" onAction="#GoToEvenement" prefHeight="42.0" prefWidth="226.0" style="-fx-background-color: #0085a1;" text="Gestion des evenements" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

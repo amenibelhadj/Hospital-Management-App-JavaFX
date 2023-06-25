@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="827.0" prefWidth="751.0" style="-fx-background-color: WHITE;-fx-border-color: black; -fx-border-radius: 5px; -fx-border-width: 3px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_fiche.gui.AjouterFicheController">
+   <children>
+      <Label layoutX="226.0" layoutY="20.0" text="Ajouter une Fiche" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="173.0" layoutY="171.0" text="Nom Patient :" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="238.0" text="Prenom Patient :" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="308.0" text="Medecin :" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="375.0" text="Maladie :" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nom" layoutX="367.0" layoutY="167.0" />
+      <TextField fx:id="txt_prenom" layoutX="367.0" layoutY="235.0" />
+      <TextField fx:id="txt_med" layoutX="367.0" layoutY="304.0" />
+      <TextField fx:id="txt_mal" layoutX="367.0" layoutY="371.0" />
+      <Button fx:id="btn_confirmer_ajout" layoutX="408.0" layoutY="452.0" mnemonicParsing="false" onMouseClicked="#ajouterF" text="CONFIRMER" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Button>
+      <Line endX="100.0" endY="-17.0" layoutX="529.0" layoutY="158.0" startX="100.0" startY="461.0" />
+      <Button fx:id="btn_home1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goHome1" style="-fx-background-color: white; -fx-border-width: 3px; -fx-border-color: #107fc7; -fx-border-radius: 8px;" text="Home" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClose" layoutX="639.0" layoutY="746.0" mnemonicParsing="false" onMouseClicked="#on_btnClose_clicked" style="-fx-background-color: white; -fx-border-color: #107fc7; -fx-border-width: 3px; -fx-border-radius: 8px;" text="Fermer" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

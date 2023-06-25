@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: #cfcfcf;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_evenement.Admininterfaces.EvenementAdminController">
+   <children>
+      <ImageView fitHeight="1005.0" fitWidth="1921.0" layoutY="-3.0" opacity="0.6" pickOnBounds="true">
+         <image>
+            <Image url="@../imgEvent/home-banner-1.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane0" layoutX="322.0" layoutY="141.0" onMouseClicked="#OpenAjoutEventInterface" onMouseEntered="#MouseChange" onMouseExited="#MouseChange" prefHeight="185.0" prefWidth="430.0" style="-fx-background-color: #d6e6ff;">
+         <children>
+            <Line endX="-100.0" endY="116.39999389648438" layoutX="736.0" layoutY="-2.0" startX="-99.50006103515625" startY="2.5" stroke="#a6a6a6" />
+            <ImageView fitHeight="110.0" fitWidth="137.0" layoutX="166.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgEvent/add-button2.jpg.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Label layoutX="695.0" layoutY="928.0" text="Page">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comboPage" layoutX="767.0" layoutY="925.0" onAction="#nextPage" prefHeight="34.0" prefWidth="136.0" promptText="page ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXButton fx:id="RtoureB" layoutX="6.0" layoutY="76.0" onAction="#RtoureB" prefHeight="30.0" prefWidth="44.0" text=" " />
+      <Pane fx:id="paneDetailEvent" layoutX="1315.0" layoutY="87.0" onMouseClicked="#InfoProduit" onMouseEntered="#MouseChange" onMouseExited="#MouseChange" prefHeight="829.0" prefWidth="587.0" style="-fx-background-color: #d6e6ff;">
+         <children>
+            <ImageView fx:id="imageEventDetail" fitHeight="245.0" fitWidth="565.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imgEvent/Forest.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomEventDetail" layoutX="24.0" layoutY="268.0" prefHeight="39.0" prefWidth="370.0" text="Nom evenement">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="34.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="310.0" prefHeight="32.0" prefWidth="183.0" text="Categorie :" textFill="#1c1c86">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="387.0" prefHeight="35.0" prefWidth="79.0" text="Pour :" textFill="#1c1c86">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="descEventDetail" alignment="TOP_LEFT" layoutX="149.0" layoutY="563.0" prefHeight="165.0" prefWidth="424.0" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Consolas" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="430.0" prefHeight="35.0" prefWidth="235.0" text="Prix (par personne) : " textFill="#1c1c86">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="472.0" prefHeight="35.0" prefWidth="206.0" text="Capacité :" textFill="#1c1c86">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateEventDetail" layoutX="422.0" layoutY="266.0" prefHeight="43.0" prefWidth="158.0" textFill="#ec1717">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="78.0" layoutY="742.0" onAction="#OpenModifEventInterface" prefHeight="76.0" prefWidth="206.0" style="-fx-background-color: #ff9b0f;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="336.0" layoutY="743.0" onAction="#SupprimerEventBTN" prefHeight="76.0" prefWidth="206.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="22.0" layoutY="511.0" prefHeight="44.0" prefWidth="154.0" text="Réservation :" textFill="#1c1c86">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="391.0" layoutY="507.0" onAction="#OpenParticipantEventInterface" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #969595;" text="Les participants" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="nbReservationEventDetail" layoutX="174.0" layoutY="516.0" prefHeight="34.0" prefWidth="66.0" textFill="#4e4eff">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="prixEventDetail" layoutX="253.0" layoutY="431.0" prefHeight="34.0" prefWidth="66.0" textFill="#4e4eff">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="capaciteEventDetail" layoutX="175.0" layoutY="471.0" prefHeight="34.0" prefWidth="66.0" textFill="#4e4eff">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="pourEventDetail" layoutX="229.0" layoutY="389.0" prefHeight="35.0" prefWidth="265.0" textFill="#4e4eff">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="553.0" prefHeight="50.0" prefWidth="116.0" text="Decription" textFill="#1c1c86">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="categorieEventDetail" layoutX="228.0" layoutY="313.0" prefHeight="35.0" prefWidth="245.0" textFill="#4e4eff">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="348.0" prefHeight="35.0" prefWidth="199.0" text="Lieu d'evenement:" textFill="#1c1c86">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lieuEventDetail1" layoutX="229.0" layoutY="350.0" prefHeight="35.0" prefWidth="265.0" textFill="#4e4eff">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="347.0" layoutY="431.0" prefHeight="35.0" prefWidth="83.0" text="Dinar" textFill="#4e4eff">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="259.0" layoutY="471.0" prefHeight="35.0" prefWidth="108.0" text="Personnes" textFill="#4e4eff">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="259.0" layoutY="519.0" prefHeight="35.0" prefWidth="108.0" text="Personnes" textFill="#4e4eff">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pane111" layoutX="375.0" layoutY="9.0" onMouseClicked="#InfoProduit" onMouseEntered="#MouseChange" onMouseExited="#MouseChange" prefHeight="65.0" prefWidth="596.0">
+         <children>
+            <TextArea fx:id="rechercherEntryEvent" layoutX="5.0" prefHeight="55.0" prefWidth="493.0" promptText="Search" wrapText="true">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextArea>
+            <Pane layoutX="500.0" layoutY="1.0" onMouseClicked="#RechercherEventNom" prefHeight="69.0" prefWidth="70.0" style="-fx-background-color: #ff9b0f;">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="55.0" layoutX="7.0" layoutY="9.0">
+                     <image>
+                        <Image url="@../imgEvent/icons8_search_24px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="pane1" layoutX="799.0" layoutY="141.0" onMouseClicked="#pane1Clicked" onMouseEntered="#sizePaneChange" onMouseExited="#sizePaneChangeExited" prefHeight="185.0" prefWidth="430.0" style="-fx-background-color: #d6e6ff;">
+         <children>
+            <ImageView fx:id="imageEventAff1" fitHeight="172.0" fitWidth="158.0" layoutY="6.0" pickOnBounds="true" />
+            <Label layoutX="160.0" layoutY="8.0" prefHeight="34.0" prefWidth="274.0" text="Nom evenement">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="id11" layoutX="222.0" layoutY="120.0" prefHeight="36.0" prefWidth="158.0" text="01/01/2023" textFill="#ec1717">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="48.0" prefHeight="32.0" prefWidth="183.0" text="Categorie" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="80.0" prefHeight="34.0" prefWidth="250.0" text="Pour " textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="113.39999389648438" layoutX="100.0" layoutY="1.0" startX="-100.0" stroke="#a6a6a6" />
+            <Label fx:id="newEvent1" layoutX="-14.0" layoutY="-3.0" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #ff8787;" text="New" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="idevent1" layoutX="27.0" layoutY="152.0" prefHeight="28.0" prefWidth="34.0" textFill="#4e4eff" visible="false">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Button fx:id="btnSigin" layoutX="6.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnSiginAction" prefHeight="58.0" prefWidth="280.0" styleClass="btn" stylesheets="@../cssEvent/main.css" text="Gérer les evenements" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnSigin11" layoutX="37.0" layoutY="867.0" mnemonicParsing="false" onAction="#btnSiginAction" prefHeight="50.0" prefWidth="218.0" style="-fx-background-color: #949494;" styleClass="btn" stylesheets="@../cssEvent/main.css" text="Retour" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <DatePicker fx:id="dateEventFiltrer" layoutX="1042.0" layoutY="9.0" onAction="#FilterEventParDate" prefHeight="57.0" prefWidth="218.0" promptText="Chercher par date ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
+      <Pane fx:id="pane2" layoutX="322.0" layoutY="338.0" onMouseClicked="#pane2Clicked" onMouseEntered="#sizePaneChange" onMouseExited="#sizePaneChangeExited" prefHeight="185.0" prefWidth="430.0" style="-fx-background-color: #d6e6ff;">
+         <children>
+            <ImageView fx:id="imageEventAff2" fitHeight="172.0" fitWidth="158.0" layoutY="6.0" pickOnBounds="true" />
+            <Label layoutX="158.0" layoutY="6.0" prefHeight="34.0" prefWidth="274.0" text="Nom evenement">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="id111" layoutX="232.0" layoutY="121.0" prefHeight="28.0" prefWidth="136.0" text="01/01/2023" textFill="#ec1717">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="164.0" layoutY="47.0" prefHeight="32.0" prefWidth="250.0" text="Categorie" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="80.0" prefHeight="34.0" prefWidth="250.0" text="Pour " textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="113.39999389648438" layoutX="100.0" layoutY="1.0" startX="-100.0" stroke="#a6a6a6" />
+            <Label fx:id="newEvent2" layoutX="-14.0" layoutY="-3.0" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #ff8787;" text="New" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="idevent2" layoutX="58.0" layoutY="155.0" prefHeight="28.0" prefWidth="34.0" textFill="#4e4eff" visible="false">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="pane3" layoutX="799.0" layoutY="339.0" onMouseClicked="#pane3Clicked" onMouseEntered="#sizePaneChange" onMouseExited="#sizePaneChangeExited" prefHeight="185.0" prefWidth="430.0" style="-fx-background-color: #d6e6ff;">
+         <children>
+            <ImageView fx:id="imageEventAff3" fitHeight="172.0" fitWidth="158.0" layoutY="6.0" pickOnBounds="true" />
+            <Label layoutX="160.0" layoutY="8.0" prefHeight="34.0" prefWidth="266.0" text="Nom evenement">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="id1111" layoutX="225.0" layoutY="117.0" prefHeight="28.0" prefWidth="136.0" text="01/01/2023" textFill="#ec1717">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="42.0" prefHeight="32.0" prefWidth="183.0" text="Categorie" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="76.0" prefHeight="34.0" prefWidth="250.0" text="Pour " textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="113.39999389648438" layoutX="100.0" layoutY="1.0" startX="-100.0" stroke="#a6a6a6" />
+            <Label fx:id="newEvent3" layoutX="-14.0" layoutY="-3.0" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #ff8787;" text="New" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="idevent3" layoutX="46.0" layoutY="151.0" prefHeight="28.0" prefWidth="34.0" textFill="#4e4eff" visible="false">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="pane4" layoutX="322.0" layoutY="534.0" onMouseClicked="#pane4Clicked" onMouseEntered="#sizePaneChange" onMouseExited="#sizePaneChangeExited" prefHeight="185.0" prefWidth="430.0" style="-fx-background-color: #d6e6ff;">
+         <children>
+            <ImageView fx:id="imageEventAff4" fitHeight="172.0" fitWidth="158.0" layoutY="6.0" pickOnBounds="true" />
+            <Label layoutX="161.0" layoutY="6.0" prefHeight="34.0" prefWidth="274.0" text="Nom evenement">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="id11111" layoutX="232.0" layoutY="121.0" prefHeight="28.0" prefWidth="136.0" text="01/01/2023" textFill="#ec1717">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="42.0" prefHeight="32.0" prefWidth="183.0" text="Categorie" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="80.0" prefHeight="34.0" prefWidth="250.0" text="Pour " textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="113.39999389648438" layoutX="100.0" layoutY="1.0" startX="-100.0" stroke="#a6a6a6" />
+            <Label fx:id="newEvent4" layoutX="-14.0" layoutY="-3.0" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #ff8787;" text="New" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="idevent4" layoutX="60.0" layoutY="152.0" prefHeight="28.0" prefWidth="34.0" textFill="#4e4eff" visible="false">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="pane5" layoutX="799.0" layoutY="533.0" onMouseClicked="#pane5Clicked" onMouseEntered="#sizePaneChange" onMouseExited="#sizePaneChangeExited" prefHeight="185.0" prefWidth="430.0" style="-fx-background-color: #d6e6ff;">
+         <children>
+            <ImageView fx:id="imageEventAff5" fitHeight="172.0" fitWidth="158.0" layoutY="6.0" pickOnBounds="true" />
+            <Label layoutX="159.0" layoutY="6.0" prefHeight="34.0" prefWidth="274.0" text="Nom evenement">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="id111111" layoutX="224.0" layoutY="117.0" prefHeight="28.0" prefWidth="136.0" text="01/01/2023" textFill="#ec1717">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="48.0" prefHeight="32.0" prefWidth="183.0" text="Categorie" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="80.0" prefHeight="34.0" prefWidth="250.0" text="Pour " textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="113.39999389648438" layoutX="100.0" layoutY="1.0" startX="-100.0" stroke="#a6a6a6" />
+            <Label fx:id="newEvent5" layoutX="-14.0" layoutY="-3.0" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #ff8787;" text="New" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="idevent5" layoutX="67.0" layoutY="156.0" prefHeight="28.0" prefWidth="34.0" textFill="#4e4eff" visible="false">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="pane6" layoutX="322.0" layoutY="730.0" onMouseClicked="#pane6Clicked" onMouseEntered="#sizePaneChange" onMouseExited="#sizePaneChangeExited" prefHeight="185.0" prefWidth="430.0" style="-fx-background-color: #d6e6ff;">
+         <children>
+            <ImageView fx:id="imageEventAff6" fitHeight="172.0" fitWidth="158.0" layoutY="6.0" pickOnBounds="true" />
+            <Label layoutX="159.0" layoutY="5.0" prefHeight="34.0" prefWidth="274.0" text="Nom evenement">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="id1111111" layoutX="232.0" layoutY="121.0" prefHeight="28.0" prefWidth="136.0" text="01/01/2023" textFill="#ec1717">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="48.0" prefHeight="32.0" prefWidth="183.0" text="Categorie" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="80.0" prefHeight="34.0" prefWidth="250.0" text="Pour " textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="113.39999389648438" layoutX="100.0" layoutY="1.0" startX="-100.0" stroke="#a6a6a6" />
+            <Label fx:id="newEvent6" layoutX="-14.0" layoutY="-3.0" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #ff8787;" text="New" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="idevent6" layoutX="90.0" layoutY="151.0" prefHeight="28.0" prefWidth="34.0" textFill="#4e4eff" visible="false">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="pane7" layoutX="800.0" layoutY="730.0" onMouseClicked="#pane7Clicked" onMouseEntered="#sizePaneChange" onMouseExited="#sizePaneChangeExited" prefHeight="185.0" prefWidth="430.0" style="-fx-background-color: #d6e6ff;">
+         <children>
+            <ImageView fx:id="imageEventAff7" fitHeight="172.0" fitWidth="158.0" layoutY="6.0" pickOnBounds="true" />
+            <Label layoutX="159.0" layoutY="6.0" prefHeight="34.0" prefWidth="274.0" text="Nom evenement">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="id11111111" layoutX="232.0" layoutY="121.0" prefHeight="28.0" prefWidth="136.0" text="01/01/2023" textFill="#ec1717">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="48.0" prefHeight="32.0" prefWidth="183.0" text="Categorie" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="80.0" prefHeight="34.0" prefWidth="250.0" text="Pour " textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="113.39999389648438" layoutX="100.0" layoutY="1.0" startX="-100.0" stroke="#a6a6a6" />
+            <Label fx:id="newEvent7" layoutX="-14.0" layoutY="-3.0" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #ff8787;" text="New" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="idevent7" layoutX="44.0" layoutY="147.0" prefHeight="28.0" prefWidth="34.0" textFill="#4e4eff" visible="false">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <JFXButton layoutX="322.0" layoutY="84.0" onAction="#ActualiserEventBTN" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #d6e6ff;" text="Actualiser">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Pane layoutX="11.0" layoutY="425.0" prefHeight="430.0" prefWidth="270.0" style="-fx-background-color: #dbdbdb;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <JFXCheckBox layoutX="47.0" layoutY="110.0" prefHeight="37.0" prefWidth="188.0" text="Séminaire">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <Label layoutX="8.0" layoutY="-3.0" prefHeight="34.0" prefWidth="66.0" text="Etat">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="21.0" />
+               </font>
+            </Label>
+            <JFXRadioButton layoutX="47.0" layoutY="25.0" onAction="#filterNewest" prefHeight="28.0" prefWidth="142.0" selected="true" text="Newest">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Etat" />
+               </toggleGroup>
+               <unSelectedColor>
+                  <Color />
+               </unSelectedColor>
+            </JFXRadioButton>
+            <Label layoutX="7.0" layoutY="69.0" prefHeight="34.0" prefWidth="102.0" text="Categorie">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="21.0" />
+               </font>
+            </Label>
+            <JFXCheckBox layoutX="47.0" layoutY="131.0" prefHeight="37.0" prefWidth="188.0" text="Formation">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="47.0" layoutY="152.0" prefHeight="37.0" prefWidth="188.0" text="Compagne de don">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="47.0" layoutY="173.0" prefHeight="37.0" prefWidth="188.0" text="Voyage">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="47.0" layoutY="194.0" prefHeight="37.0" prefWidth="188.0" text="Compagne de sensibilisation">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="47.0" layoutY="215.0" prefHeight="37.0" prefWidth="188.0" text="Consultation sur terain">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="49.0" layoutY="265.0" prefHeight="37.0" prefWidth="188.0" text="Tous">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <Label layoutX="9.0" layoutY="241.0" prefHeight="34.0" prefWidth="116.0" text="Dédier pour">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="21.0" />
+               </font>
+            </Label>
+            <JFXCheckBox layoutX="49.0" layoutY="286.0" prefHeight="37.0" prefWidth="188.0" text="Médecins">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="49.0" layoutY="307.0" prefHeight="37.0" prefWidth="188.0" text="Médecins,épouses">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="49.0" layoutY="328.0" prefHeight="37.0" prefWidth="188.0" text="Cadre médicale">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="49.0" layoutY="349.0" prefHeight="37.0" prefWidth="188.0" text="Infirmiers">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="49.0" layoutY="370.0" prefHeight="37.0" prefWidth="188.0" text="Infirmiers,épouses">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="49.0" layoutY="391.0" prefHeight="37.0" prefWidth="188.0" text="Les agents">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="47.0" layoutY="89.0" prefHeight="37.0" prefWidth="188.0" text="Tous">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXRadioButton layoutX="47.0" layoutY="48.0" onAction="#filterOldest" prefHeight="28.0" prefWidth="142.0" text="Oldest" toggleGroup="$Etat">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color />
+               </unSelectedColor>
+            </JFXRadioButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

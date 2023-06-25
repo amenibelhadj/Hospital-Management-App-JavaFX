@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_stock.gui.ModifierProduitsController">
+   <children>
+      <Text layoutX="14.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tapez l'id du produit à modifier" />
+      <TextField fx:id="modifid" layoutX="226.0" layoutY="87.0" />
+      <Text layoutX="36.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="entrer le nouveau nom" />
+      <TextField fx:id="modifnom" layoutX="226.0" layoutY="161.0" />
+      <Text layoutX="36.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="entrer le nouveau type" />
+      <TextField fx:id="modiftype" layoutX="227.0" layoutY="206.0" />
+      <Text layoutX="36.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="entrer la nouvelle quantite" />
+      <TextField fx:id="modifquantite" layoutX="226.0" layoutY="248.0" />
+      <Text layoutX="38.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="entrer le nouveau prix" />
+      <TextField fx:id="modifprix" layoutX="228.0" layoutY="297.0" />
+      <Button fx:id="buttonmodif" layoutX="261.0" layoutY="343.0" mnemonicParsing="false" onAction="#modifierProduit" text="Modifier" textFill="#0a7e2f" />
+      <Text fill="#1b67bf" layoutX="191.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFIER PRODUIT">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font></Text>
+      <Button fx:id="modif_aff" layoutX="453.0" layoutY="123.0" mnemonicParsing="false" onAction="#AFF_modifier" text="afficher la liste des produits" textFill="#107321" />
+      <ImageView fitHeight="162.0" fitWidth="150.0" layoutX="459.0" layoutY="161.0">
+         <image>
+            <Image url="@../../image/5355708-pharmacie-logo-pharmacie-logo-vecteur-vectoriel.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

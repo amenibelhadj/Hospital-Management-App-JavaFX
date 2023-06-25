@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_stock.gui.AfficherProduitController">
+   <children>
+      <TableView fx:id="tableau" layoutX="121.0" layoutY="222.0" prefHeight="200.0" prefWidth="681.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="col_nom" prefWidth="250.4000244140625" text="nom" />
+            <TableColumn fx:id="col_type" prefWidth="89.5999755859375" text="type" />
+            <TableColumn fx:id="col_quantite" prefWidth="131.20001220703125" text="quantite" />
+            <TableColumn fx:id="col_prix" prefWidth="134.40008544921875" text="prix" />
+        </columns>
+      </TableView>
+      <Text fill="#d1a521" layoutX="153.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AFFICHAGE DE LA LISTE DES PRODUITS">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="button_sup" layoutX="592.0" layoutY="466.0" mnemonicParsing="false" onAction="#supprimerproduit" text="supprimer un produit" />
+      <Button fx:id="button_med" layoutX="312.0" layoutY="159.0" mnemonicParsing="false" onAction="#affiche_medicament" text="Medicaments" />
+      <Button fx:id="button_eq" layoutX="189.0" layoutY="159.0" mnemonicParsing="false" onAction="#affiche_equipement" prefHeight="26.0" prefWidth="88.0" text="Equipements" />
+      <Button fx:id="afficher_ajouter" layoutX="132.0" layoutY="466.0" mnemonicParsing="false" onAction="#ajouter_AFF" text="Ajouter un produit" />
+      <Button fx:id="afficher_modifier" layoutX="368.0" layoutY="466.0" mnemonicParsing="false" onAction="#modifier_AFF" text="Modifier un produit" />
+      <Button fx:id="buttonaff" layoutX="444.0" layoutY="159.0" mnemonicParsing="false" onAction="#Affichertout" text="afficher tous les produits" />
+      <TextField fx:id="chercher_input" layoutX="325.0" layoutY="87.0" />
+      <Text layoutX="193.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chercher un produit" />
+      <Button fx:id="buttonRehercher" layoutX="508.0" layoutY="87.0" mnemonicParsing="false" onAction="#rechercherProduit" text="Rechercher" />
+      <ImageView fitHeight="73.0" fitWidth="62.0" layoutX="842.0" layoutY="25.0">
+         <image>
+            <Image url="@../../image/png-clipart-pharmacien-pharmacie-technicien-en-pharmacie-meditsiinisemiootika-pharmacie-clinique-professionnel-de-la-sante-symbole-soins-de-sante-thumbnail.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="back" fitHeight="45.0" fitWidth="48.0" layoutX="31.0" layoutY="31.0" onMouseClicked="#back_tologin">
+         <image>
+            <Image url="@../../tache_user/image/la-gauche.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

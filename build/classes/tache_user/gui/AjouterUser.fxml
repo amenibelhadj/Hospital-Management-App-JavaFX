@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="754.0" prefWidth="1115.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_user.gui.AjouterUserController">
+   <children>
+      <Text fill="#05c0e1" layoutX="412.0" layoutY="144.0" stroke="#570606" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Your Account" textAlignment="CENTER">
+         <font>
+            <Font name="Impact" size="35.0" />
+         </font>
+      </Text>
+      <Text layoutX="331.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez votre nom:">
+         <font>
+            <Font name="Dubai Regular" size="17.0" />
+         </font></Text>
+      <Text layoutX="331.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez votre prénom:">
+         <font>
+            <Font name="Dubai Regular" size="18.0" />
+         </font></Text>
+      <Text layoutX="331.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez votre CIN:">
+         <font>
+            <Font name="Dubai Regular" size="18.0" />
+         </font></Text>
+      <Text layoutX="331.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez votre e-mail:">
+         <font>
+            <Font name="Dubai Regular" size="18.0" />
+         </font></Text>
+      <Text layoutX="331.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sélectionnez votre rôle:">
+         <font>
+            <Font name="Dubai Regular" size="18.0" />
+         </font></Text>
+      <TextField fx:id="txtnom" layoutX="552.0" layoutY="257.0" prefHeight="31.0" prefWidth="231.0" />
+      <TextField fx:id="txtprenom" layoutX="552.0" layoutY="309.0" prefHeight="31.0" prefWidth="231.0" />
+      <TextField fx:id="txtcin" layoutX="552.0" layoutY="361.0" prefHeight="31.0" prefWidth="231.0" promptText="8 chiffres" />
+      <TextField fx:id="txtemail" alignment="CENTER" layoutX="552.0" layoutY="410.0" prefHeight="31.0" prefWidth="231.0" promptText="----------------------@----------" />
+      <ComboBox fx:id="boxrole" layoutX="552.0" layoutY="464.0" prefHeight="31.0" prefWidth="231.0" promptText="Choisissez votre rôle" />
+      <Button fx:id="confirmer" layoutX="594.0" layoutY="622.0" mnemonicParsing="false" onAction="#ajouterU" prefHeight="55.0" prefWidth="189.0" style="-fx-background-color: #0085a1;" text="Confirmer" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></Button>
+      <Text fill="#0085a1" layoutX="295.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO SafeEYE" wrappingWidth="524.3945323079824">
+         <font>
+            <Font name="Impact" size="61.0" />
+         </font>
+      </Text>
+      <Text layoutX="331.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez votre mot de passe:">
+         <font>
+            <Font name="Dubai Regular" size="17.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="txtmdp" layoutX="552.0" layoutY="514.0" prefHeight="31.0" prefWidth="231.0" />
+      <ImageView fitHeight="146.0" fitWidth="144.0" layoutX="894.0" layoutY="43.0">
+         <image>
+            <Image url="@../image/Eye%20Center%20Logo%20Template%20Design%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="156.0" fitWidth="171.0" layoutX="881.0" layoutY="279.0">
+         <image>
+            <Image url="@../image/undraw_Female_avatar_re_9amj.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="156.0" fitWidth="171.0" layoutX="881.0" layoutY="515.0">
+         <image>
+            <Image url="@../image/undraw_Male_avatar_re_hguk.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="back" fitHeight="55.0" fitWidth="65.0" layoutX="36.0" layoutY="667.0" onMouseClicked="#back_tologin">
+         <image>
+            <Image url="@../image/la-gauche.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+</AnchorPane>

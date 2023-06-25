@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="698.0" prefWidth="1025.0" style="-fx-background-color: #cfcfcf;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_evenement.Admininterfaces.AjoutEvenementAdminController">
+   <children>
+      <ImageView fitHeight="696.0" fitWidth="1031.0" layoutX="-1.0" layoutY="1.0" opacity="0.6" pickOnBounds="true">
+         <image>
+            <Image url="@../imgEvent/home-banner-1.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="NomEvenement" layoutX="102.0" layoutY="142.0" prefHeight="47.0" prefWidth="323.0" promptText="Nom evenement">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="DescriptionEvenement" layoutX="102.0" layoutY="424.0" prefHeight="163.0" prefWidth="323.0" promptText="Description" wrapText="true">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextArea>
+      <DatePicker fx:id="DateEvenement" layoutX="102.0" layoutY="366.0" prefHeight="47.0" prefWidth="323.0" promptText="Date de l'évenement" />
+      <ComboBox fx:id="Categorie" layoutX="102.0" layoutY="197.0" prefHeight="47.0" prefWidth="323.0" promptText="Catégorie" />
+      <Label fx:id="TitleInterfaceAjout" alignment="CENTER" layoutX="226.0" layoutY="1.0" prefHeight="65.0" prefWidth="556.0" text="Ajouter un événement" textFill="#0b0000">
+         <font>
+            <Font name="Akhbar MT Bold" size="48.0" />
+         </font>
+      </Label>
+      <TextField fx:id="LieuEvenement" layoutX="102.0" layoutY="310.0" prefHeight="47.0" prefWidth="323.0" promptText="Lieu de l'événement">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="Pour" layoutX="102.0" layoutY="257.0" prefHeight="47.0" prefWidth="323.0" promptText="Dédier pour" />
+      <Label layoutX="529.0" layoutY="545.0" text="Tarif/Personne">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="Tarif" editable="true" layoutX="678.0" layoutY="546.0" prefHeight="26.0" prefWidth="120.0" />
+      <Label layoutX="529.0" layoutY="508.0" text="Capacité">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="Capacite" editable="true" layoutX="678.0" layoutY="508.0" prefHeight="28.0" prefWidth="120.0" />
+      <Button contentDisplay="BOTTOM" layoutX="530.0" layoutY="142.0" mnemonicParsing="false" onAction="#ChoisirImageEvenementBTN" prefHeight="47.0" prefWidth="120.0" styleClass="search-button" stylesheets="@../../../../javafxproj/JAVAFX_Project-main/src/values/style.css" text="Choisir image">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="851.0" layoutY="627.0" mnemonicParsing="false" onAction="#EffacerChampsEvenement" prefHeight="40.0" prefWidth="149.0" styleClass="modif-button" stylesheets="@../../../../javafxproj/JAVAFX_Project-main/src/values/style.css" text="Effacer">
+         <font>
+            <Font name="Cambria" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="AjoutEventButton" contentDisplay="BOTTOM" layoutX="426.0" layoutY="627.0" mnemonicParsing="false" onAction="#AjoutEventButton" prefHeight="40.0" prefWidth="169.0" styleClass="search-button" stylesheets="@../../../../javafxproj/JAVAFX_Project-main/src/values/style.css" text="Ajouter">
+         <font>
+            <Font name="Cambria" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="ModiferEventButton" contentDisplay="BOTTOM" layoutX="426.0" layoutY="627.0" mnemonicParsing="false" onAction="#ModifierEventButton" prefHeight="40.0" prefWidth="169.0" styleClass="search-button" stylesheets="@../../../../javafxproj/JAVAFX_Project-main/src/values/style.css" text="Modifier" textFill="#563b0d">
+         <font>
+            <Font name="Cambria" size="25.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="ImageEvenement" fitHeight="290.0" fitWidth="404.0" layoutX="530.0" layoutY="197.0" pickOnBounds="true" />
+      <Label layoutX="808.0" layoutY="508.0" text="Personnes">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="808.0" layoutY="545.0" text="Dinar">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="PathImageEvenement" layoutX="657.0" layoutY="148.0" prefHeight="36.0" prefWidth="310.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="AnnulerImageEventBTN" contentDisplay="BOTTOM" layoutX="911.0" layoutY="197.0" mnemonicParsing="false" onAction="#AnnulerImageEvenementBTN" prefHeight="16.0" prefWidth="15.0" style="-fx-background-color: #8f0011;" styleClass="search-button" stylesheets="@../../../../javafxproj/JAVAFX_Project-main/src/values/style.css" text="X" textFill="WHITE" visible="false">
+         <font>
+            <Font name="HP Simplified Hans Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="PathImageEvenement2" layoutX="653.0" layoutY="148.0" prefHeight="36.0" prefWidth="310.0" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEvent1" alignment="CENTER" layoutX="425.0" layoutY="149.0" onMouseEntered="#showAlertEventNom" onMouseExited="#exitAlertEventNom" prefHeight="36.0" prefWidth="31.0" text="!" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEvent2" alignment="CENTER" layoutX="425.0" layoutY="202.0" onMouseEntered="#showAlertEventCategorie" onMouseExited="#exitAlertEventCategorie" prefHeight="36.0" prefWidth="31.0" text="!" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEvent3" alignment="CENTER" layoutX="425.0" layoutY="263.0" onMouseEntered="#showAlertEventPour" onMouseExited="#exitAlertEventPour" prefHeight="36.0" prefWidth="31.0" text="!" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEvent4" alignment="CENTER" layoutX="425.0" layoutY="316.0" onMouseEntered="#showAlertEventLieu" onMouseExited="#exitAlertEventLieu" prefHeight="36.0" prefWidth="31.0" text="!" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEvent5" alignment="CENTER" layoutX="426.0" layoutY="372.0" onMouseEntered="#showAlertEventDate" onMouseExited="#exitAlertEventDate" prefHeight="36.0" prefWidth="31.0" text="!" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEvent6" alignment="CENTER" layoutX="425.0" layoutY="424.0" onMouseEntered="#showAlertEventDesc" onMouseExited="#exitAlertEventDesc" prefHeight="36.0" prefWidth="31.0" text="!" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEvent7" alignment="CENTER" layoutX="895.0" layoutY="504.0" onMouseEntered="#showAlertEventCapacité" onMouseExited="#exitAlertEventCapacité" prefHeight="36.0" prefWidth="31.0" text="!" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEvent8" alignment="CENTER" layoutX="895.0" layoutY="541.0" onMouseEntered="#showAlertEventTarif" onMouseExited="#exitAlertEventTarif" prefHeight="36.0" prefWidth="31.0" text="!" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEventNom" alignment="CENTER" layoutX="228.0" layoutY="148.0" prefHeight="36.0" prefWidth="197.0" style="-fx-background-color: red;" text="Saisir le nom de l'événement" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEventCategorie" alignment="CENTER" layoutX="202.0" layoutY="203.0" prefHeight="36.0" prefWidth="224.0" style="-fx-background-color: red;" text="Entrez la catégorie de l'événement" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEventPour" alignment="CENTER" layoutX="201.0" layoutY="263.0" prefHeight="36.0" prefWidth="224.0" style="-fx-background-color: red;" text="Entrez pour qui l'événement" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEventLieu" alignment="CENTER" layoutX="202.0" layoutY="316.0" prefHeight="36.0" prefWidth="224.0" style="-fx-background-color: red;" text="Saisir le lieu de l'événement" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEventDate" alignment="CENTER" layoutX="201.0" layoutY="372.0" prefHeight="36.0" prefWidth="224.0" style="-fx-background-color: red;" text="Entrez le date de l'événement" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEventDesc" alignment="CENTER" layoutX="167.0" layoutY="433.0" prefHeight="36.0" prefWidth="259.0" style="-fx-background-color: red;" text="Saisir une description pour l'événement" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEventCapacité" alignment="CENTER" layoutX="683.0" layoutY="504.0" prefHeight="36.0" prefWidth="224.0" style="-fx-background-color: red;" text="Choisir le capacité de l'événement" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertEventTarif" alignment="CENTER" layoutX="616.0" layoutY="542.0" prefHeight="36.0" prefWidth="291.0" style="-fx-background-color: red;" text="Choisir le Tarif par personne de l'événement" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Nova Cond Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXCheckBox fx:id="sendMail" layoutX="201.0" layoutY="637.0" text="Send Mail" textFill="#0f1981" unCheckedColor="#111b79">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+   </children>
+</AnchorPane>

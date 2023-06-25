@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="fiche_pane" prefHeight="925.0" prefWidth="1278.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px; -fx-border-width: 3px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_fiche.gui.IFicheController">
+   <children>
+      <Label layoutX="330.0" layoutY="14.0" text="Bienvenue sur l'espace Fiche-Patient" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="40.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_ajouter" layoutX="108.0" layoutY="666.0" mnemonicParsing="false" onMouseClicked="#ajouterFiche" text="Ajouter" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_modifier" layoutX="278.0" layoutY="666.0" mnemonicParsing="false" onMouseClicked="#modifierFiche" text="Modifier" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_supprimer" layoutX="461.0" layoutY="666.0" mnemonicParsing="false" onMouseClicked="#supprimerFiche" text="Supprimer" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_afficher" layoutX="26.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#afficherFiche" text="Afficher la liste des Fiches" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_imprimer" layoutX="1161.0" layoutY="843.0" mnemonicParsing="false" onAction="#imprimerF" prefHeight="39.0" prefWidth="91.0" text="Imprimer" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="chercher" layoutX="74.0" layoutY="750.0" prefHeight="26.0" prefWidth="269.0" promptText="filtre de recherche..." />
+      <Line endX="100.0" endY="-33.0" layoutX="636.0" layoutY="142.0" startX="100.0" startY="704.0" />
+      <Label layoutX="779.0" layoutY="187.0" text="Gestionnaire des Fiches :" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="870.0" layoutY="354.0" text="Nom Patient :" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="852.0" layoutY="431.0" text="Prenom Patient :" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="893.0" layoutY="512.0" text="Medecin :" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="898.0" layoutY="591.0" text="Maladie :" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nom" layoutX="1036.0" layoutY="349.0" />
+      <TextField fx:id="txt_prenom" layoutX="1036.0" layoutY="429.0" />
+      <TextField fx:id="txt_med" layoutX="1036.0" layoutY="507.0" />
+      <TextField fx:id="txt_mal" layoutX="1036.0" layoutY="586.0" />
+      <Button fx:id="btn_valider" layoutX="1027.0" layoutY="685.0" mnemonicParsing="false" onMouseClicked="#validerF" text="Valider" textFill="#107fc7">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="idtxt" layoutX="461.0" layoutY="847.0" opacity="0.0" />
+      <TableView fx:id="table" layoutX="42.0" layoutY="222.0" onMouseClicked="#selectF" prefHeight="350.0" prefWidth="599.0">
+        <columns>
+          <TableColumn fx:id="idtab" minWidth="0.0" prefWidth="0.0" text="ID" />
+          <TableColumn fx:id="nomtab" prefWidth="186.0" text="Nom Patient" />
+            <TableColumn fx:id="prenomtab" prefWidth="152.0" text="Prenom Patient" />
+            <TableColumn fx:id="medtab" prefWidth="128.0" text="Medecin" />
+            <TableColumn fx:id="maltab" minWidth="0.0" prefWidth="133.0" text="Maladie" />
+        </columns>
+      </TableView>
+      <Button fx:id="ref" layoutX="613.0" layoutY="143.0" mnemonicParsing="false" onMouseClicked="#refF" text="Actualiser" textFill="#107fc7">
+      <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="back" fitHeight="45.0" fitWidth="48.0" layoutX="34.0" layoutY="19.0" onMouseClicked="#back_tologin">
+         <image>
+            <Image url="@../../tache_user/image/la-gauche.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

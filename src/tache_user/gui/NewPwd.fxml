@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="587.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_user.gui.NewPwdController">
+   <children>
+      <TextField fx:id="txtnew" layoutX="84.0" layoutY="448.0" promptText="new password" />
+      <TextField fx:id="txtconfirm" layoutX="84.0" layoutY="498.0" promptText="Confirm password" />
+      <Button fx:id="newpasswordbutton" layoutX="353.0" layoutY="433.0" mnemonicParsing="false" onAction="#NewPwd" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #005559;" text="Confirmer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Button>
+      <TextField fx:id="txtemail1" layoutX="84.0" layoutY="394.0" promptText="your email" />
+      <Text fill="#008486" layoutX="131.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password">
+         <font>
+            <Font name="Impact" size="55.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="166.0" fitWidth="235.0" layoutX="176.0" layoutY="154.0">
+         <image>
+            <Image url="@../image/undraw_secure_login_pdn4.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

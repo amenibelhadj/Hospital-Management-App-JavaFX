@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="1048.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_user.gui.AuthentificationController">
+   <children>
+      <TextField fx:id="authemail" layoutX="424.0" layoutY="198.0" promptText="-------------------@------" />
+      <Text layoutX="244.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez votre email: ">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Text layoutX="244.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre mot de passe: ">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Button fx:id="connecter" layoutX="464.0" layoutY="395.0" mnemonicParsing="false" onAction="#authentification" prefHeight="52.0" prefWidth="157.0" style="-fx-background-color: #0085a1;" text="Connecter" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="16.0" />
+         </font></Button>
+      <Text fill="#0085a1" layoutX="315.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authentification">
+         <font>
+            <Font name="Impact" size="60.0" />
+         </font>
+      </Text>
+      <Text fill="#50c1da" layoutX="474.0" layoutY="320.0" onMouseClicked="#mdp_oublie" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe oublié ?" underline="true">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Text>
+      <PasswordField fx:id="authmdp" layoutX="424.0" layoutY="260.0" />
+      <ImageView fitHeight="208.0" fitWidth="234.0" layoutX="762.0" layoutY="199.0">
+         <image>
+            <Image url="@../image/undraw_Join_re_w1lh.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="back" fitHeight="52.0" fitWidth="55.0" layoutX="79.0" layoutY="421.0" onMouseClicked="#back_tologin">
+         <image>
+            <Image url="@../image/la-gauche.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="148.0" fitWidth="157.0" layoutX="801.0" layoutY="14.0">
+         <image>
+            <Image url="@../image/Eye%20Center%20Logo%20Template%20Design%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tache_reclamation.views.RecInterfaceController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="4.0" prefHeight="540.0" prefWidth="861.0" style="-fx-background-color: white;" styleClass="mainFxmlClass">
+         <stylesheets>
+            <URL value="@../../../../../Downloads/gestionadminarticleinterface.css" />
+         </stylesheets>
+         <children>
+            <Pane layoutY="-27.0" prefHeight="99.0" prefWidth="862.0" style="-fx-background-color: #0598ff;">
+               <children>
+                  <Text fill="WHITE" layoutX="27.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interface Reclamation">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Text layoutX="14.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" wrappingWidth="42.50927734375">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text layoutX="11.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom" wrappingWidth="108.50927734375">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="prenomRec" layoutX="125.0" layoutY="214.0" prefHeight="28.0" prefWidth="147.0" />
+            <TextArea fx:id="nomRec" layoutX="125.0" layoutY="152.0" prefHeight="28.0" prefWidth="147.0" />
+            <Button fx:id="ajouterRec" layoutX="369.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#addRec" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #0598ff;" text="Ajouter " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tableRec" layoutX="369.0" layoutY="199.0" onMouseClicked="#getSelected" prefHeight="261.0" prefWidth="485.0">
+               <columns>
+                  <TableColumn fx:id="id" minWidth="0.0" prefWidth="0.0" text="ID" />
+                  <TableColumn fx:id="nom" prefWidth="103.0" text="Nom" />
+                  <TableColumn fx:id="userId" minWidth="0.0" prefWidth="0.0" text="User_id" />
+                  <TableColumn fx:id="premon" prefWidth="103.0" text="Prenom" />
+                  <TableColumn fx:id="email" prefWidth="103.0" text="Email" />
+                  <TableColumn fx:id="desc" prefWidth="175.0" text="Description" />
+               </columns>
+            </TableView>
+            <Button fx:id="supprimerRec" layoutX="481.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#deleteRec" style="-fx-background-color: #0598ff;" text="Supprimer " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifierRec" layoutX="592.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#updateRec" style="-fx-background-color: #0598ff;" text="Modifier " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Text layoutX="14.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="108.50927734375">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="emailRec" layoutX="128.0" layoutY="270.0" prefHeight="28.0" prefWidth="147.0" />
+            <Text layoutX="14.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="108.50927734375">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="descRec" layoutX="123.0" layoutY="328.0" prefHeight="128.0" prefWidth="222.0" />
+            <TextArea fx:id="idtxt" layoutX="130.0" layoutY="85.0" opacity="0.0" prefHeight="28.0" prefWidth="147.0" />
+            <Button fx:id="pdfRec" layoutX="706.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#generationpdf" prefHeight="37.0" prefWidth="80.0" style="-fx-background-color: #0598ff;" text="PDF" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="recherche" layoutX="612.0" layoutY="134.0" prefHeight="48.0" prefWidth="201.0" />
+            <Text layoutX="512.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recherche" wrappingWidth="99.99999943375587">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Button fx:id="Retourbtn" layoutX="66.0" layoutY="470.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #0598ff;" text="retour" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

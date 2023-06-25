@@ -1,0 +1,37 @@
+.btn{
+	-fx-background-color : linear-gradient(to left, #517bbe, #3a519a);
+	-fx-border:none;
+	-fx-padding:00px;
+	-fx-background-radius:35px;
+	-fx-font-size:20;
+	-fx-cursor: pointer;
+}
+
+
+.txtField{
+	-fx-border-radius: 30;
+	-fx-border-color:#3f65ac;
+	-fx-background-radius:20;
+	-fx-background-color:#0000;
+	-fx-text-color:white;
+	-fx-padding:10;
+	
+
+}
+
+
+.navBtn{
+	-fx-border:none;
+	-fx-background-color:none;
+	-fx-text-fill:#3f65ac;
+	-fx-font-size:30;
+ 	-fx-cursor: hand;
+
+}
+.navBtn:hover{
+	-fx-text-fill:#fff;
+}
+.navIcon:hover{
+	background:url(/uploads/whiteicons/settings.png) no-repeat 0 0;
+
+}
